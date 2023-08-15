@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrap{
+        width: 1000px;
+        height: 400px;
+        margin: 0 auto;
+       
+    }
+    .img{
+        position: relative;
+    }
+    .ul{
+        position: relative;
+            left:20px;
+            bottom:50px;
+
+    }
+    .ul>li{
+        margin-left: 10px;
+      list-style: none;
+      width: 15px;
+      height: 15px;
+      border-radius: 999px;
+      background-color: aqua;
+      float: left;
+      cursor: pointer;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <img src="p1.jpeg" alt="" width="1000px" height="400px" class="img" id="img">
+        <ul class="ul" id="ul">
+            <li id="li1"></li>
+            <li id="li2"></li>
+            <li id="li3"></li>
+            <li id="li4"></li>
+            <li id="li5"></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //属性获取
+    let arrImg = ["p1.jpeg","p2.jpeg","p3.jpeg","p4.jpeg","p5.jpeg"]
+        //let arrLi = document.querySelectorAll('ul>li')
+    let Img = document.getElementById('img')
+    let li1 = document.getElementById('li1')
+    let li2 = document.getElementById('li2')
+    let li3 = document.getElementById('li3')
+    let li4 = document.getElementById('li4')
+    let li5 = document.getElementById('li5')
+
+    //点击切换
+    li1.onclick = function(){
+        num = 0  
+    }
+    li2.onclick = function(){
+        num = 1
+    }
+    li3.onclick = function(){
+        num = 2
+    }
+    li4.onclick = function(){
+        num = 3
+    }
+    li5.onclick = function(){
+        num = 4 
+    }
+    
+
+    //自动播放
+    let num = 0
+    img = setInterval(() => {
+       
+        Img.src = arrImg[num]
+        num+=1  
+        if(num == 5)
+        num = 0 
+    }, 1000);
+    
+
+</script>
+</html>
