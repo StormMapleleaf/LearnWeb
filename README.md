@@ -1,2 +1,2 @@
 # learn
-个人仓库
+训练营HTML，CSS，Javascript学习资料
